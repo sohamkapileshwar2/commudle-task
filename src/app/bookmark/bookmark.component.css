@@ -1,0 +1,38 @@
+/* Main Card */
+nb-card{
+    width: 50%;
+    height: 30%;
+    background: url('../search-event/card-background.jfif') no-repeat center center fixed;
+    background-size: cover;
+    border: 1px solid black;
+    margin: auto;
+
+}
+
+/* Card body */
+nb-card-body{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 35px;
+}
+
+/* div containing movie info */
+#movie-info{
+    justify-content: center;
+    margin-top: 20%;
+}
+
+/* Go to search button */
+.button {
+    background-color: #9fbfdf;
+    font-size: 20px;
+    padding: 7px;
+    border: solid 1px black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p {
+    font-family: 'Lucida Sans';
+    font-size: 20px;
+}

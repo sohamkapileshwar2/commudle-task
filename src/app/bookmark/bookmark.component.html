@@ -1,0 +1,31 @@
+<nb-layout>
+    <nb-layout-header fixed>
+        <div style="font-size: 25px; margin-right: auto;">
+            Movies Search App
+        </div>
+        <button routerLink="/search" routerLinkActive="active" class="button" type="button">
+            Search
+        </button>
+    </nb-layout-header>
+    <nb-layout-column style="border: 2px solid black;">
+        <ul *ngFor="let movie of bookmarks" style="display: flex; justify-content: center;">
+            <nb-card id="card-body">
+                <nb-card-header style="border-bottom: 1px solid black;">
+                    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">{{movie.Title}} -  {{movie.Year}}</h2>
+                </nb-card-header>
+                <nb-card-body>
+                    <img src={{movie.Poster}}>
+                    <div id="movie-info">
+                        <p>Genre - {{movie.Genre}}</p>
+                        <p>Ratings:</p>
+                        <ul *ngFor="let rating of movie.Ratings" style="margin-right: 0px;">
+                            <li style="list-style-type: square;">
+                                {{rating['Source']}} - {{rating['Value']}}
+                            </li>
+                        </ul>
+                    </div>
+                </nb-card-body>
+            </nb-card>
+        </ul>
+    </nb-layout-column>
+</nb-layout>

@@ -24,9 +24,12 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@nebular/theme/styles/prebuilt/default.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/app/bookmark/bookmark-movie.js"
+            ]
           },
           "configurations": {
             "production": {

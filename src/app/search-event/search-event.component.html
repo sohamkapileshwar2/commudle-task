@@ -1,0 +1,28 @@
+<div style="display: flex; justify-content: center;">
+    <nb-search type="modal-drop"></nb-search>
+    <h2 *ngIf="!value" style="margin-top: 0px;">Search for a movie</h2>
+    <h2 *ngIf="value" style="margin-top: 0px;">Your search results for {{value}} are</h2>
+</div>
+<h2 *ngIf="error; else result" style="color: #9fbfdf;">{{error}}</h2>
+<ng-template #result>
+    <ul *ngFor="let movie of movieList">
+        <nb-card card-border-color #000000>
+            <nb-card-body id="card">
+                <img src={{movie.Poster}}>
+                <div id="movie-info">
+                    <h2>{{movie.Title}}</h2>
+                    <p style="font-size: 18px;">Released in - {{movie.Year}}</p>
+                    <p style="font-size: 18px;">Genre - {{movie.Genre}}</p>
+                    <p style="font-size: 18px;">Ratings:</p>
+                    <ul *ngFor="let rating of movie.Ratings" style="margin-right: 20px;">
+                        <li style="list-style-type: square;">
+                            {{rating['Source']}} - {{rating['Value']}}
+                        </li>
+                    </ul>
+                    <p style="font-size: 18px;">Its a {{movie.Type}}</p>
+                </div>
+            </nb-card-body>
+            <button type="button" id="bookmark" (click) = "bookmark_button(movie)">Add to bookmarks</button>
+        </nb-card>
+    </ul>
+</ng-template>
