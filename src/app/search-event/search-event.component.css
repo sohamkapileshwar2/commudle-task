@@ -2,12 +2,6 @@
 nb-card{
     width: 60%;
     height: 30%;
-    /* @media only screen and (max-width: $tablet);
-    width: 50%;
-    height: 30%;
-    @media only screen and (max-width: $mobile-large);
-    width: 80%;
-    height: 20%; */
     background: url('./card-background.jfif') no-repeat center center fixed;
     background-size: cover;
     border: 1px solid black;
