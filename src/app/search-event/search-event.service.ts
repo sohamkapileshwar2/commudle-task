@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http'
 
 @Injectable()
 export class OmdbApi {
-    private _baseUrl: string = 'http://www.omdbapi.com/?apikey=9d68afe3&';
+    private _baseUrl: string = 'https://www.omdbapi.com/?apikey=9d68afe3&';
 
     constructor(private http: HttpClient) { }
 
